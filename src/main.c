@@ -6,10 +6,15 @@ int main()
   printf("\n***********************************\n");
   printf("Bem-Vindo ao calculador de Fibonacci\n");
   printf("***********************************\n");
-  printf("Digite o termo de fibonacci que deseja calcular:\nn = ");
 
   int n;
-  scanf("%d", &n);
+  do
+  {
+    printf("Digite o termo de fibonacci que deseja calcular:\nn = ");
+    scanf("%d", &n);
+    if(n <= 0) printf("O valor de n deve ser positivo, tente de novo...\n\n");
+  } while (n <= 0);
+  
 
   printf("\nAlgoritmo recursivo:\tF(n) = %llu\n", fib_recursivo(n));
   printf("Algoritmo iterativo:\tF(n) = %llu\n", fib_iterativo(n));
