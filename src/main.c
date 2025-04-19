@@ -15,7 +15,8 @@ int main()
     if(n <= 0) printf("O valor de n deve ser positivo, tente de novo...\n\n");
   } while (n <= 0);
 
-  printf("Qual versao do fibonacci voce quer,\no recursivo, o iterativo ou os dois? [r/i/2]\n");
+  printf("Qual versao do fibonacci voce quer,\n");
+  printf("o Recursivo, o Iterativo ou os Dois? [r/i/2]\n");
   char opc;
   
   do

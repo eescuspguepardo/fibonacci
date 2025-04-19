@@ -17,7 +17,8 @@ unsigned long long int fib_iterativo(int n)
   if(n == 1) return 1; // fib(1) = 1
   else       return (1 / sqrt(5)) * (
                     pow((1 + sqrt(5)) / 2, n
-                  ) - pow((1 - sqrt(5)) / 2, n));
+                ) - pow((1 - sqrt(5)) / 2, n)
+              );
 }
 
 
