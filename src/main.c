@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <time.h>
 #include "fib.h"
 
 int main()
@@ -22,12 +23,39 @@ int main()
   do
   {
     scanf(" %c", &opc);
-    if     (opc == 'r') printf("\nAlgoritmo recursivo:\tF(n) = %llu\n", fib_recursivo(n));
-    else if(opc == 'i') printf("Algoritmo iterativo:\tF(n) = %llu\n", fib_iterativo(n));
+    if     (opc == 'r') 
+    {
+      clock_t tempo;
+      tempo = clock();
+      printf("\nAlgoritmo Iterativo: F(n) = %llu\t", fib_iterativo(n));
+      tempo = clock() - tempo;
+      double tempo_de_execucao = ((double) tempo) / CLOCKS_PER_SEC;
+      printf("Tempo de execucao: %f segundos\n", tempo_de_execucao);
+
+    }
+    else if(opc == 'i') 
+    {
+      clock_t tempo = clock();
+      printf("Algoritmo Recursivo: F(n) = %llu\t", fib_recursivo(n));
+      tempo = clock() - tempo;
+      double tempo_de_execucao = ((double) tempo) / CLOCKS_PER_SEC;
+      printf("Tempo de execucao: %f segundos\n", tempo_de_execucao);
+
+    }
     else if(opc == '2')
     {
-      printf("\nAlgoritmo recursivo:\tF(n) = %llu\n", fib_recursivo(n));
-      printf("Algoritmo iterativo:\tF(n) = %llu\n", fib_iterativo(n));
+      clock_t tempo;
+      tempo = clock();
+      printf("\nAlgoritmo Iterativo: F(n) = %llu\t", fib_iterativo(n));
+      tempo = clock() - tempo;
+      double tempo_de_execucao = ((double) tempo) / CLOCKS_PER_SEC;
+      printf("Tempo de execucao: %f segundos\n", tempo_de_execucao);
+      
+      tempo = clock();
+      printf("Algoritmo Recursivo: F(n) = %llu\t", fib_recursivo(n));
+      tempo = clock() - tempo;
+      tempo_de_execucao = ((double) tempo) / CLOCKS_PER_SEC;
+      printf("Tempo de execucao: %f segundos\n", tempo_de_execucao);
     }
     else 
     {// ERRO
