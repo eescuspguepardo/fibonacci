@@ -2,13 +2,17 @@
 #include "fib.h"
 #include <math.h>
 
-int fib_recursivo(int n)
+unsigned long long int fib_recursivo(int n)
 {
-  if(n  == 1)
+  if (n <= 0)
+  {
+    return 0; // ERRO
+  } 
+  else if(n  == 1)
   {
     return 1; // fib(1) =  1
-  }
-  if(n == 2)
+  } 
+  else if(n == 2)
   {
     return 1; // fib(2) = 2
   }
@@ -17,7 +21,7 @@ int fib_recursivo(int n)
 }
 
 
-int fib_iterativo(int n)
+unsigned long long int fib_iterativo(int n)
 {
   if(n <= 0)
   {
