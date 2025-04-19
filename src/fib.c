@@ -1,5 +1,6 @@
 #include <stdio.h>
-#include <fib.h>
+#include "fib.h"
+#include <math.h>
 
 int fib_recursivo(int n)
 {
@@ -9,7 +10,7 @@ int fib_recursivo(int n)
   }
   if(n == 2)
   {
-    return 2; // fib(1) + fib(2) = 1 + 1 = 2
+    return 1; // fib(2) = 2
   }
   
   return fib_recursivo(n - 1) + fib_recursivo(n - 2);
@@ -27,15 +28,8 @@ int fib_iterativo(int n)
     return 1;
   }
 
-  // Terminar de implementar versão iterativa
-  int fib_n = 0;
-  int fib_n_1 = 1;
-  int fib_n_2 = 1;
-  for(int i = 0; i < n; i++)
-  {
-    fib = fib_n_1 + fib_n_2;
-    fib_n_1 = fib_n_2;
-  }
+  return (1 / sqrt(5)) * (pow((1 + sqrt(5)) / 2, n) - pow((1 - sqrt(5)) / 2, n));
+
 }
 
 
