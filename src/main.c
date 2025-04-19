@@ -14,7 +14,6 @@ int main()
     scanf("%d", &n);
     if(n <= 0) printf("O valor de n deve ser positivo, tente de novo...\n\n");
   } while (n <= 0);
-  
 
   printf("\nAlgoritmo recursivo:\tF(n) = %llu\n", fib_recursivo(n));
   printf("Algoritmo iterativo:\tF(n) = %llu\n", fib_iterativo(n));
