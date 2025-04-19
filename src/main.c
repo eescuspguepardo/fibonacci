@@ -11,10 +11,11 @@ int main()
   int n;
   scanf("%d", &n);
 
-  printf("Algoritmo recursivo:\nF(n) = %llu\n", fib_recursivo(n));
-  printf("Algoritmo iterativo:\nF(n) = %llu\n", fib_iterativo(n));
+  printf("\nAlgoritmo recursivo:\tF(n) = %llu\n", fib_recursivo(n));
+  printf("Algoritmo iterativo:\tF(n) = %llu\n", fib_iterativo(n));
 
-  printf("\n****** Fim do programa...\n******\n");
-  
+  printf("\n*****************\n");
+  printf("Fim do programa...\n");
+  printf("*****************\n");
   return 0;
 }
