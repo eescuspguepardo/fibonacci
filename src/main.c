@@ -23,7 +23,7 @@ int main()
   do
   {
     scanf(" %c", &opc);
-    if     (opc == 'r') 
+    if     (opc == 'i') 
     {
       clock_t tempo;
       tempo = clock();
@@ -33,7 +33,7 @@ int main()
       printf("Tempo de execucao: %f segundos\n", tempo_de_execucao);
 
     }
-    else if(opc == 'i') 
+    else if(opc == 'r') 
     {
       clock_t tempo = clock();
       printf("Algoritmo Recursivo: F(n) = %llu\t", fib_recursivo(n));
