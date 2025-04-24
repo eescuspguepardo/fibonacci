@@ -1,5 +1,5 @@
 # Compilador
-CC = gcc
+CC = clang-19
 CFLAGS = -g -Wall -O3
 
 # Diretórios
